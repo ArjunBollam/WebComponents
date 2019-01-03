@@ -1,0 +1,25 @@
+<html !DOCTYPE>
+
+<head>
+    <script src="custom-phone-field-element.js">
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <div style="width:300px;">
+            <app-phone-number></app-phone-number>
+        </div>
+    </form>
+
+    <script>
+             const phoneInput = document.querySelector('app-phone-number');
+             phoneInput.addEventListener('phoneNumberChanged',function(event){
+                  console.log(event);
+             })
+
+    </script>
+</body>
+
+</html>

@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { NgModule, Injector } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import { PhoneComponent } from './phone-component/phone-component.component';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [
-    AppComponent
+    PhoneComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
   ],
+  entryComponents:[PhoneComponent],
   providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(injector: Injector) {
+    const acc = createCustomElement(PhoneComponent, { injector });
+    customElements.define('app-phone-number',acc);
+ }
+ ngDoBootstrap() {}
+}

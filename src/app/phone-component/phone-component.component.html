@@ -1,0 +1,20 @@
+    <div class="user-tel" [ngClass]="{'is-focusing': phoneFieldHasFocus}">
+        <div class="user-telgroup">
+          <label for="userPhone0" class="visuallyhidden">Phone Number 0</label>
+          <input #userPhone0 id="userPhone0" (focus)="focusPhoneField()" (blur)="blurPhoneField()" (keydown)="phoneFieldKeyDown($event, 0)"
+            (keyup)="phoneFieldKeyUp($event, 0)" type="tel" class="user-input-field  input-field" placeholder="XXX" pattern="^[0-9]*$"
+            maxlength="3" [(ngModel)]="phoneFields[0]">
+        </div>
+        <div class="user-telgroup">
+          <label for="userPhone1" class="visuallyhidden">Phone Number 1</label>
+          <input #userPhone1 id="userPhone1" (focus)="focusPhoneField()" (blur)="blurPhoneField()" (keydown)="phoneFieldKeyDown($event, 1)"
+            (keyup)="phoneFieldKeyUp($event, 1)" type="tel" class="user-input-field  input-field" placeholder="XXX" pattern="^[0-9]*$"
+            maxlength="3" [(ngModel)]="phoneFields[1]">
+        </div>
+        <div class="user-telgroup">
+          <label for="userPhone2" class="visuallyhidden">Phone Number 2</label>
+          <input #userPhone2 id="userPhone2" (focus)="focusPhoneField()" (blur)="blurPhoneField()" (keydown)="phoneFieldKeyDown($event, 2)"
+            (keyup)="phoneFieldKeyUp($event, 2)" type="tel" class="user-input-field  input-field" placeholder="XXXX" pattern="^[0-9]*$"
+            maxlength="4" [(ngModel)]="phoneFields[2]">
+        </div>
+    </div>

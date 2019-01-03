@@ -1,0 +1,108 @@
+.user-tel {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom: 2px solid;
+    border-color: #e9e9d9;
+    overflow: hidden;
+}
+.user-tel.is-focusing {
+    border-color: #ffbe00;
+}
+
+.user-telgroup:nth-child(1) {
+    max-width: 50px;
+}
+.user-telgroup:nth-child(1), .user-telgroup:nth-child(2) {
+    color: rgba(92, 68, 43, 0.5);
+    width: 20%;
+}
+
+.user-telgroup {
+    float: left;
+    margin-top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    width:30%;
+    position: relative;
+}
+.user-telgroup:nth-child(1):before {
+    content: "(";
+    left: 0;
+}
+.user-telgroup:nth-child(1):before, .user-telgroup:nth-child(1):after {
+    position: absolute;
+    -webkit-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+    top: 50%;
+    position: absolute;
+}
+.user-telgroup:nth-child(1):after {
+    content: ")";
+    right: 0;
+}
+
+.user-telgroup:nth-child(2) {
+    max-width: 44px;
+    padding-left: 0;
+}
+.user-telgroup:nth-child(1), .user-telgroup:nth-child(2) {
+    color: rgba(92, 68, 43, 0.5);
+    width: 20%;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.user-telgroup:nth-child(1) .input-field, .user-telgroup:nth-child(1) .fancy-input-field, .user-telgroup:nth-child(1) .plain-input-field, .user-telgroup:nth-child(2) .input-field, .user-telgroup:nth-child(2) .fancy-input-field, .user-telgroup:nth-child(2) .plain-input-field {
+    text-align: center;
+}
+.user-telgroup .input-field, .user-telgroup .fancy-input-field, .user-telgroup .plain-input-field {
+    border-bottom: none;
+}
+
+.user-input-field {
+    padding-left: 0;
+    padding-right: 0;
+}
+.input-field, .fancy-input-field, .plain-input-field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    border-color: #e9e9d9;
+    color: rgba(92, 68, 43, 0.5);
+    font-family: "Cabin", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    outline: none;
+    padding: 0.625rem 0.5rem 0.5625rem;
+    padding-right: 1px;
+    width: 100%;
+    height: auto;
+}
+
+.input-field:focus {
+    border: none;
+    border-bottom: 2px solid;
+    border-color:#ffbe00;
+    color:#5c442b;
+    outline:none;
+}
+
+.user-telgroup:nth-child(2):after {
+    position: absolute;
+    -webkit-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+    top: 50%;
+    content: "-";
+    right: 0;
+}
